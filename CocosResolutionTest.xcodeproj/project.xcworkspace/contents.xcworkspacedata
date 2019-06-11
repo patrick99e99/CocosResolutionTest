@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/patrick/coding/objective_c/CocosResolutionTest/cat-hd.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/patrick/coding/objective_c/CocosResolutionTest/cat.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/patrick/coding/objective_c/CocosResolutionTest/headshot-hd.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/patrick/coding/objective_c/CocosResolutionTest/headshot.png">
+   </FileRef>
+   <FileRef
+      location = "self:/Users/patrick/coding/objective_c/CocosResolutionTest/CocosResolutionTest.xcodeproj">
+   </FileRef>
+</Workspace>
