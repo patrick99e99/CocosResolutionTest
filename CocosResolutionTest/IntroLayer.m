@@ -8,7 +8,6 @@
 @property (nonatomic) float speed;
 @end
 
-
 @implementation IntroLayer
 
 -(instancetype)init {
@@ -16,7 +15,7 @@
         self.offset = self.headshot.contentSize.width * 0.5;
         self.velX = 1.0f;
         self.velY = 1.0f;
-        self.speed = 1000;
+        self.speed = 100;
 
         CCSprite *background = [CCSprite spriteWithFile:@"cat.png"];
         background.position = ccp(384, 512);
@@ -44,11 +43,11 @@
     float leftEdge = 0.0f + self.offset;
     float rightEdge = 768.0f - self.offset;
 
-    if (self.headshot.position.x > rightEdge || self.headshot.position.x < leftEdge) {
+    if (self.headshot.position.x >= rightEdge || self.headshot.position.x <= leftEdge) {
         self.velX *= -1;
     }
 
-    if (self.headshot.position.y > bottomEdge || self.headshot.position.y < topEdge) {
+    if (self.headshot.position.y >= bottomEdge || self.headshot.position.y <= topEdge) {
         self.velY *= -1;
     }
 

@@ -1,0 +1,2 @@
+@interface Director : CCDirectorIOS
+@end
