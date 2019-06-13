@@ -1,2 +1,3 @@
-@interface Director : CCDirectorIOS
-@end
+    @interface Director : CCDirectorDisplayLink
+    -(void)initialize;
+    @end

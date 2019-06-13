@@ -1,6 +1,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "Director.h"
 
 @implementation NavigationController
 
@@ -23,7 +24,7 @@
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NavigationController *navController;
-@property (nonatomic, weak) CCDirectorIOS *director;
+@property (nonatomic, weak) Director *director;
 @property (nonatomic, strong) UIWindow *mainWindow;
 @end
 
@@ -42,24 +43,10 @@
 
 	// Enable multiple touches
 	[glView setMultipleTouchEnabled:YES];
-    self.director = (CCDirectorIOS *)[CCDirector sharedDirector];
-    
-	// Display FSP and SPF
-	[self.director setDisplayStats:NO];
-	
-	// set FPS at 60
-	[self.director setAnimationInterval:1.0f / 60.0f];
-	
-	// attach the openglView to the director
-	[self.director setView:glView];
+        self.director = (Director *)[Director sharedDirector];
+        [self.director initialize];
+        [self.director setView:glView];
 
-	// 2D projection
-	[self.director setProjection:kCCDirectorProjection2D];
-    
-	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-    if (![self.director enableRetinaDisplay:YES]) {
-		CCLOG(@"Retina Display Not supported");
-    }
     
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
